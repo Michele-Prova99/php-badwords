@@ -8,9 +8,9 @@ Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deseru
 
 $length = strlen($text);
 
-$badword = $_GET['word'];
+$badword = $_GET['badword'];
 
-$replace = str_replace($badword, '***', $text);
+$replace = str_replace($badword, '***', $text, $counter);
 
 ?>
 
@@ -28,5 +28,9 @@ $replace = str_replace($badword, '***', $text);
 
     <p><?php echo $replace; ?></p>
 
+    <p>La parola modificata è: <?php echo $badword; ?></p>
+
   </body>
 </html>
+
+<!-- http://localhost:8888/lavori-php/index.php?badword=ipsum -->
