@@ -8,6 +8,10 @@ Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deseru
 
 $length = strlen($text);
 
+$badword = $_GET["word"];
+
+$replace = str_replace($badword, "***", $text);
+
 ?>
 
 <!DOCTYPE html>
@@ -20,7 +24,9 @@ $length = strlen($text);
 
     <p><?php echo $text; ?></p>
 
-    <p>Il testo è composto da <?php echo $length ?> caratteri.</p>
+    <p>Il testo è composto da <?php echo $length; ?> caratteri.</p>
+
+    <p><?php echo $replace; ?></p>
 
   </body>
 </html>
